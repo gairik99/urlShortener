@@ -9,7 +9,7 @@ const handleRedirection = async (req, res) => {
             visitHistory: { typeStamp: Date.now() }
         }
     })
-    res.redirect(entry.redirectUrl);
+    res.redirect(entry.redirectUrl || '/');
 }
 
 module.exports = { handleRedirection };
